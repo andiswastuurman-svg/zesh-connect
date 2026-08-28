@@ -8,6 +8,13 @@
       "when": 1787908920303,
       "tag": "0000_milky_moondragon",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1787909487410,
+      "tag": "0001_yielding_power_pack",
+      "breakpoints": true
     }
   ]
 }

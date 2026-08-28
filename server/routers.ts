@@ -5,6 +5,7 @@ import { publicProcedure, router } from "./_core/trpc";
 import { invokeLLM } from "./_core/llm";
 import { generateImage } from "./_core/imageGeneration";
 import { z } from "zod";
+import { createCampaign, listCreatorProfiles, listLibraryAssets } from "./db";
 
 export const appRouter = router({
     // if you need to use socket.io, read and register route in server/_core/index.ts, all api should start with '/api/' so that the gateway can route correctly
@@ -20,6 +21,15 @@ export const appRouter = router({
     }),
   }),
 
+  creators: router({
+    list: publicProcedure.query(() => listCreatorProfiles()),
+  }),
+  campaigns: router({
+    create: publicProcedure.input(z.object({ ownerId: z.number().int().positive(), name: z.string().min(2), brief: z.string().min(8), objective: z.string().min(2), status: z.enum(["draft", "active", "review", "completed"]).default("draft") })).mutation(({ input }) => createCampaign(input)),
+  }),
+  library: router({
+    list: publicProcedure.input(z.object({ ownerId: z.number().int().positive() })).query(({ input }) => listLibraryAssets(input.ownerId)),
+  }),
   ai: router({
     generateMarketing: publicProcedure
       .input(z.object({ format: z.string(), brief: z.string().min(8).max(1200) }))

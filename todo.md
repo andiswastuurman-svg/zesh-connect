@@ -19,12 +19,21 @@
 
 ## Follow-up implementation items
 
-- [ ] Implement real role-specific onboarding and tailored profile setup for business, creator, and agent accounts.
-- [ ] Build detailed creator profile views with audience notes, media, rates, agent details, and collaboration actions.
-- [ ] Replace hardcoded AI Studio output with tRPC calls to server AI procedures, including loading and error states.
-- [ ] Add a collaboration response generator UI wired to the server response procedure.
-- [ ] Implement matching inputs, recommendation logic, and explainable match-factor breakdowns.
-- [ ] Add persistent schema and data helpers for campaigns, creator profiles, library assets, and saved content.
-- [ ] Connect image inspiration and library actions to functional generation/search and persistence flows.
-- [ ] Expand Vitest coverage for AI parsing, campaign data, and interaction utilities.
-- [ ] Complete final build and browser-console validation, then create the project checkpoint.
+- [x] Implement real role-specific onboarding and tailored profile setup for business, creator, and agent accounts.
+- [x] Build detailed creator profile views with audience notes, media, rates, agent details, and collaboration actions.
+- [x] Replace hardcoded AI Studio output with tRPC calls to server AI procedures, including loading and error states.
+- [x] Add a collaboration response generator UI wired to the server response procedure.
+- [x] Implement matching inputs, recommendation logic, and explainable match-factor breakdowns.
+- [x] Add persistent schema and data helpers for campaigns, creator profiles, library assets, and saved content.
+- [x] Connect image inspiration and library actions to functional generation/search and persistence flows.
+- [x] Expand Vitest coverage for AI parsing, campaign data, and interaction utilities.
+- [x] Complete final build and browser-console validation, then create the project checkpoint.
+
+## Validation follow-ups
+
+- [x] Implement true role-specific onboarding and profile forms for business, creator, and agent accounts.
+- [x] Enhance creator profiles with media sections and concrete audience notes.
+- [x] Build computed creator matching with campaign-goal inputs and factor explanations.
+- [x] Persist saved library assets and generated inspiration through tRPC-backed flows.
+- [x] Add Vitest coverage for AI response parsing, campaign procedures, and interaction utilities.
+- [x] Run explicit browser-console validation and save a fresh final checkpoint after the latest changes.
