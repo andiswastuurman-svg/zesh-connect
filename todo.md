@@ -37,3 +37,11 @@
 - [x] Persist saved library assets and generated inspiration through tRPC-backed flows.
 - [x] Add Vitest coverage for AI response parsing, campaign procedures, and interaction utilities.
 - [x] Run explicit browser-console validation and save a fresh final checkpoint after the latest changes.
+
+## Social and workspace extensions
+
+- [x] Add Instagram, TikTok, LinkedIn, Facebook, and Twitter/X platform support to creator data, filters, profiles, and campaign planning.
+- [x] Add generated-image results and save actions to the image-inspiration workspace.
+- [x] Add reusable generated code snippets with copy and download actions.
+- [x] Extend the dashboard with social-channel mix, platform performance, and generated-asset activity.
+- [x] Validate the extension on desktop and mobile and save a new checkpoint.

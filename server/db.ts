@@ -107,3 +107,12 @@ export async function listLibraryAssets(ownerId: number): Promise<LibraryAsset[]
   const db = await getDb();
   return db ? db.select().from(libraryAssets).where(eq(libraryAssets.ownerId, ownerId)) : [];
 }
+
+export async function saveLibraryAsset(input: Omit<LibraryAsset, "id" | "createdAt">): Promise<LibraryAsset | undefined> {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db.insert(libraryAssets).values(input);
+  const id = Number(result[0].insertId);
+  const rows = await db.select().from(libraryAssets).where(eq(libraryAssets.id, id)).limit(1);
+  return rows[0];
+}
